@@ -6,7 +6,7 @@ public class ConsoleExercises {
         //DONE 1: Write some Java code that uses the variable pi to output the following:
             //The value of pi is approximately 3.14.
         double pi = 3.14159;
-        System.out.printf("The value of pi is approximately %s", pi);
+        System.out.format("The value of pi is approximately: %.2f", pi);
         System.out.println("");
 
         //------------
