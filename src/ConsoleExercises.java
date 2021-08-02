@@ -15,27 +15,31 @@ public class ConsoleExercises {
         //DONE 1: Prompt a user to enter a integer and store that value in an int variable using the
             // nextInt method. What happens if you input something that is not an integer?
                 //error, exception in thread "main" java
-        //TODO: UNCOMMENT
-//        Scanner scanner = new Scanner(System.in);
-//        scanner.useDelimiter("\n");
-//        System.out.print("Enter an integer: ");
-//        int userInput = scanner.nextInt();
-//        System.out.println("You Entered: --> \"" + userInput + "\" <--");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int userInput = scanner.nextInt();
+        System.out.println("You Entered: --> \"" + userInput + "\" <--");
+
+        //Put this in bc nextInt gives issues when reading the next line
+        //https://www.geeksforgeeks.org/why-is-scanner-skipping-nextline-after-use-of-other-next-functions/
+        scanner.nextLine();
 
         // DONE: 2: Prompt a user to enter 3 words, and store each of them in a separate variable.
         // Then, display them back in the console, each on a newline.
             //What happens if you enter less than 3 words? --> Will not continue code until three user inputs are given
             //What happens if you enter more than 3 words? --> the fourth on aren't registered/displayed
-        //TODO: UNCOMMENT
 
-//        System.out.print("Enter three words: ");
-//        String firstWord = scanner.next();
-//        String secondWord = scanner.next();
-//        String thirdWord = scanner.next();
-//
-//        System.out.println(firstWord);
-//        System.out.println(secondWord);
-//        System.out.println(thirdWord);
+        System.out.print("Enter a word: ");
+        String firstWord = scanner.nextLine();
+        System.out.print("Enter a word: ");
+        String secondWord = scanner.nextLine();
+        System.out.print("Enter a word: ");
+        String thirdWord = scanner.nextLine();
+
+        System.out.println(firstWord);
+        System.out.println(secondWord);
+        System.out.println(thirdWord);
 
         //DONE 3: Prompt a user to enter a sentence, then store that sentence in a String variable using
         // the next method. Then, display that sentence back to the user.
@@ -46,12 +50,10 @@ public class ConsoleExercises {
 //        System.out.println(userSentence);
 
         //4: Rewrite the above example using the nextLine method.
-        //TODO: Ask why when run together this isn't registered, continues automatically?? UNCOMMENT
 
-//        System.out.print("Enter a sentence: ");
-//        String userSentence = scanner.nextLine();
-//        System.out.println(userSentence);
-
+        System.out.print("Enter a sentence: ");
+        String userSentence = scanner.nextLine();
+        System.out.println(userSentence);
 
         //------------
         //CALCULATE THE PERIMETER AND AREA OF CODEUP'S CLASSROOM
@@ -79,8 +81,6 @@ public class ConsoleExercises {
 
         //-----------
         //BONUSES
-        //TODO: Make sure did correctly?
-
         //DONE In your perimeter/area calculator: - Accept decimal entries.
 
 //        System.out.print("Enter length of classroom: ");
@@ -89,14 +89,14 @@ public class ConsoleExercises {
 //        System.out.print("Enter width of classroom: ");
 //        String width = scanner.nextLine();
 //        float numbWidth = Float.parseFloat(width);
-
+//
 //        float area = numbLength * numbWidth;
 //        System.out.println("Area: " + area);
 //        float perimeter = 2 * numbWidth + 2 * numbLength;
 //        System.out.println("Perimeter: " + perimeter);
-
-        // DONE Calculate the volume of the rooms in addition to the area and perimeter.
-
+//
+//        // DONE Calculate the volume of the rooms in addition to the area and perimeter.
+//
 //        System.out.print("Enter depth of classroom: ");
 //        float depth = scanner.nextFloat();
 //        float volume = depth * numbWidth * numbLength;
@@ -111,9 +111,6 @@ public class ConsoleExercises {
         //Rewrite your classroom program to use nextInt method. If you added the line of code
         // above to your application, you should now have no trouble handling multiple pieces of
         // user input.
-
-        Scanner scanner = new Scanner(System.in);
-        scanner.useDelimiter("\n");
 
         System.out.print("Enter length:");
         int length = scanner.nextInt();
