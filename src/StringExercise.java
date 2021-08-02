@@ -6,42 +6,20 @@ public class StringExercise {
     // String variable and one print statement for each output example.
             //We don't need no education
             //We don't need no thought control
+            String firstOutput = "We don't need no education\nWe don't need no thought control";
+            System.out.println(firstOutput);
 
             //Check "this" out!, "s inside of "s!
+            String secondOutput = "Check \"this\" out!, \"s inside of \"s!";
+            System.out.println(secondOutput);
 
             //In windows, the main drive is usually C:\
+            String thirdOutput = "In windows, the main drive is usually C:\\";
+            System.out.println(thirdOutput);
 
             //I can do backslashes \, double backslashes \\,
             //and the amazing triple backslash \\\!
-
-    //2: Create a class named Bob with a main method for the following exercise.
-    //Bob is a lackadaisical teenager. In conversation, his responses are very limited.
-        //Bob answers 'Sure.' if you ask him a question. (the input ends with a question mark)
-        //He answers 'Whoa, chill out!' if you yell at him. (the input ends with an exclamation mark)
-        //He says 'Fine. Be that way!' if you address him without actually saying anything. (empty input)
-        //He answers 'Whatever.' to anything else.
-    //Write the Java code necessary so that a user of your command line application can have a
-    // conversation with Bob.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            String fourthOutput = "I can do backslashes \\, double backslashes \\\\,\nand the amazing triple backslash\\\\\\!";
+            System.out.println(fourthOutput);
     }
 }
