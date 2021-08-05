@@ -10,7 +10,6 @@ public class Bob {
         //DONE: He says 'Fine. Be that way!' if you address him without actually saying anything. (empty input)
         //DONE: He answers 'Whatever.' to anything else.
     //Write the Java code necessary so that a user of your command line application can have a conversation with Bob.
-
     Scanner sc = new Scanner(System.in);
     System.out.println("I'm Bob...do you need something? (Y/N)");
     String answer = sc.nextLine();
