@@ -19,7 +19,7 @@ public class Person {
         System.out.printf("Hello, %s!", name);
     }
 
-    public static void main(String [] args){
+    public static void main(String [] args){}
 
     //Understanding References
 //        Person person1 = new Person("John");
@@ -45,7 +45,6 @@ public class Person {
 //        p1.sayHello();
 //        Person p2 = new Person("Jubilee");
 //        System.out.println(p2.getName());
-    }
 }
 
 
