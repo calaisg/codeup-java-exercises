@@ -19,9 +19,21 @@ public class Rectangle {
         return (length * 2) + (width * 2);
     }
 
-    public static void main(String[] args ){
-        Rectangle r1 = new Rectangle(4, 5);
-        System.out.println(r1.getPerimeter());
-        System.out.println(r1.getArea());
+    public double getLength() {
+        return length;
     }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public static void main(String[] args){}
 }
