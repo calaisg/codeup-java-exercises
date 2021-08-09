@@ -2,9 +2,8 @@ package shapes;
 
 public class Rectangle {
 
-    private double length;
-
-    private double width;
+    protected double length;
+    protected double width;
 
     public Rectangle(double length, double width){
         this.length = length;
@@ -17,22 +16,6 @@ public class Rectangle {
 
     public double getPerimeter(){
         return (length * 2) + (width * 2);
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
     }
 
     public static void main(String[] args){}
