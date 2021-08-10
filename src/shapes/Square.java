@@ -8,17 +8,28 @@ public class Square extends Quadrilateral {
         super(side, side);
     }
 
-    public static void main(String[] args){}
-
     @Override
     public double getPerimeter() {
-        return super.length * 4;
+        return this.length * 4;
     }
 
     @Override
     public double getArea() {
-        return super.length * super.length;
+        return this.length * this.length;
     }
+
+    @Override
+    public void setLength(double length) {
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    public void setWidth(double width) {
+        this.setLength(width);
+    }
+
+    public static void main(String[] args){}
 }
 
 //INHERITANCE & POLYMORPHISM
