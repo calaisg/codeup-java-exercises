@@ -3,16 +3,16 @@ public class Person {
     //-----------Object Basics------------
     private String name;
 
-    public Person(String givenName) {
-        setName(givenName);
+    public Person(String name) {
+        this.name = name;
     }
 
     public String getName(){
         return name;
     }
 
-    public void setName(String name1){
-        name = name1;
+    public void setName(String name){
+        this.name = name;
     }
 
     public void sayHello(){

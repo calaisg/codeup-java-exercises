@@ -28,13 +28,13 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        System.out.printf("Enter a number between %d and %d: ", min, max);
+        System.out.printf("Make Your Selection: ", min, max);
         int number = sc.nextInt();
         if(number >= min && number <= max){
             return number;
         }
         else{
-            System.out.println("Error: Number not in range");
+            System.out.println("Error: Choice Not Recognized!");
             return getInt(min, max);
         }
     }
