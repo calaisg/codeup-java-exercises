@@ -1,10 +1,11 @@
 package grades;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
+import saturdaySessions.InputSat;
+import util.*;
+
 //TODO: Attendance
-//TODO: KeyValue to loop and make less code
 
 public class GradesApplication {
 
@@ -19,8 +20,9 @@ public class GradesApplication {
                     "2 - View Overall Class Average\n" +
                     "3 - Print CSV Report of All Students\n");
 
-            Scanner sc = new Scanner(System.in);
-            int selection = sc.nextInt();
+            //gets user choice from Input
+            Input input = new Input();
+            int selection = input.getInt(0, 3);
 
             switch(selection){
                 case 0:
@@ -38,12 +40,14 @@ public class GradesApplication {
                 default:
                     System.out.println("\nError: Input not Recognized. Please Try Again.");
             }
+
+            System.out.println("\nEnding Method. Goodbye!");
         }
     }
 
+    //TODO: KeyValue to loop and make less code
     //if 1 selected, display student GitHub Info
     public static boolean displayStudentMenu(HashMap <String, Student> students){
-        Scanner sc = new Scanner(System.in);
         System.out.println("\nHere are the Github usernames of our students:\n");
         System.out.println("|NotAMorningPerson|  |TinyMenace|  |TooMuchHair|  |HairlessRat|");
 
@@ -51,7 +55,8 @@ public class GradesApplication {
         boolean continueRunning = true;
         while(continueRunning){
             System.out.println("\nWhat Student would you like to see more information on?");
-            String userAnswer = sc.nextLine();
+            Input input = new Input();
+            String userAnswer = input.getString();
             continueRunning = showUserSelection(userAnswer, students);
         }
 
@@ -69,14 +74,9 @@ public class GradesApplication {
 
         //check if user wants to check another student
         System.out.println("\nWould you like to see another student?");
-        Scanner sc = new Scanner(System.in);
-        String userAnswer = sc.nextLine();
-        if(userAnswer.contains("y")){
-           return true;
-        }
-        else{
-            return false;
-        }
+        Input input = new Input();
+        boolean userAnswer = input.yesNo();
+        return userAnswer;
     }
 
     //display selected student values
@@ -86,6 +86,7 @@ public class GradesApplication {
         System.out.println("Current Average: " + students.get(selection).getGradeAverage());
     }
 
+    //TODO: KeyValue to loop and make less code
     //if 2 selected, display overall class average
     public static boolean displayClassAverage(HashMap <String, Student> students){
 
@@ -97,6 +98,7 @@ public class GradesApplication {
         return returnToMainMenu();
     }
 
+    //TODO: KeyValue to loop and make less code
     //if 3 selected, print our CSV Report
     public static boolean displayCSVReport(HashMap <String, Student> students){
 
@@ -111,16 +113,10 @@ public class GradesApplication {
 
     //check if user wants to return to main menu
     public static boolean returnToMainMenu(){
-        Scanner sc = new Scanner(System.in);
         System.out.println("\nDo you want to return to the main menu?");
-        String userAnswer = sc.nextLine();
-        if(userAnswer.contains("y")){
-            return true;
-        }
-        else{
-            System.out.println("\nEnding Method. Goodbye!");
-            return false;
-        }
+        Input input = new Input();
+        boolean userAnswer = input.yesNo();
+        return userAnswer;
     }
 
 
@@ -153,6 +149,5 @@ public class GradesApplication {
         students.put("HairlessRat", s4);
 
         displayChoices(students);
-
     }
 }

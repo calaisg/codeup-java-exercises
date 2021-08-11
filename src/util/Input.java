@@ -11,15 +11,13 @@ public class Input {
     private Scanner sc = new Scanner(System.in);
 
     public String getString(){
-        System.out.println("Enter input: ");
         String input = sc.nextLine();
         return input;
     }
 
     public boolean yesNo(){
-        System.out.println("Do you want to continue? (yes/y/no/n)");
         String answer = sc.nextLine();
-        if(answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("y")){
+        if(answer.contains("y") || answer.contains("Y")){
             return true;
         }
         else{
@@ -28,7 +26,6 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        System.out.printf("Make Your Selection: ", min, max);
         int number = sc.nextInt();
         if(number >= min && number <= max){
             return number;
@@ -40,13 +37,11 @@ public class Input {
     }
 
     public int getInt(){
-        System.out.println("Enter a number: ");
         int number = sc.nextInt();
         return number;
     }
 
     public double getDouble(double min, double max){
-        System.out.printf("Enter a number between %f and %f: ", min, max);
         double number = sc.nextDouble();
         if(number >= min && number <= max){
             return number;
@@ -58,7 +53,6 @@ public class Input {
     }
 
     public double getDouble(){
-        System.out.println("Enter a number: ");
         double number = sc.nextDouble();
         return number;
     }
