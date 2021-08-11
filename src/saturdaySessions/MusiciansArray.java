@@ -1,3 +1,7 @@
+package saturdaySessions;
+
+import saturdaySessions.Musician;
+
 public class MusiciansArray {
     public static Musician[] findAll() {
         return new Musician[] {

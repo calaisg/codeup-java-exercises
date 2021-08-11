@@ -5,8 +5,8 @@ public class ServerNameGenerator{
 
     //Create two arrays whose elements are strings: one with at least 10 adjectives,
     // another with at least 10 nouns.
-        static String[] adjectives = {"adorable", "anxious", "awkward", "blushing", "brainy", "cautious", "clever", "clumsy", "cute", "quirky"};
-        static String[] nouns = {"dog", "cat", "bird", "bearded-dragon", "gekko", "fish", "otter", "hamster", "turtle", "mouse"};
+        public static String[] adjectives = {"adorable", "anxious", "awkward", "blushing", "brainy", "cautious", "clever", "clumsy", "cute", "quirky"};
+        public static String[] nouns = {"dog", "cat", "bird", "bearded-dragon", "gekko", "fish", "otter", "hamster", "turtle", "mouse"};
 
 
     //Create a method that will return a random element from an array of strings.

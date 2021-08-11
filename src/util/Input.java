@@ -4,14 +4,14 @@ import java.util.Scanner;
 
 public class Input {
 
-    //Allow all of your methods for getting input to accept an optional String parameter
+    //Allow all of your methods for getting saturdaySessions.input to accept an optional String parameter
     // named prompt. If passed, the method should show the given prompt to the user
-    // before parsing the input.
+    // before parsing the saturdaySessions.input.
 
     private Scanner sc = new Scanner(System.in);
 
     public String getString(){
-        System.out.println("Enter input: ");
+        System.out.println("Enter saturdaySessions.input: ");
         String input = sc.nextLine();
         return input;
     }

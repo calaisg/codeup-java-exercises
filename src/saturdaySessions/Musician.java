@@ -1,3 +1,5 @@
+package saturdaySessions;
+
 public class Musician {
     private String firstName;
     private String lastName;

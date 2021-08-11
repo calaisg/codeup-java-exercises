@@ -34,9 +34,9 @@ public class MethodsExercises {
         }
 
     //---------------------------------------------------------------------------------------
-    //DONE 2: Create a method that validates that user input is in a certain range
+    //DONE 2: Create a method that validates that user saturdaySessions.input is in a certain range
 
-        //checks if input is within range
+        //checks if saturdaySessions.input is within range
         public static int getInteger(int min, int max){
             Scanner scanner = new Scanner(System.in);
 
@@ -155,7 +155,7 @@ public class MethodsExercises {
 //        System.out.println(modulus(5, 5));
 
 
-        //2 Validates user input is in a Certain range
+        //2 Validates user saturdaySessions.input is in a Certain range
 //        System.out.println("----Exercise 2: Validate Range----");
 //        System.out.println("Success!" + getInteger(1, 15) + "is within range!");
 
