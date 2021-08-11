@@ -13,7 +13,7 @@ public class ConsoleExercises {
         //EXPLORE THE SCANNER CLASS
 
         //DONE 1: Prompt a user to enter a integer and store that value in an int variable using the
-            // nextInt method. What happens if you saturdaySessions.input something that is not an integer?
+            // nextInt method. What happens if you input something that is not an integer?
                 //error, exception in thread "main" java
 
         Scanner scanner = new Scanner(System.in);
@@ -59,7 +59,7 @@ public class ConsoleExercises {
 //        //CALCULATE THE PERIMETER AND AREA OF CODEUP'S CLASSROOM
 //
 //        //DONE 1: Prompt the user to enter values of length and width of a classroom at Codeup.
-//        //Use the nextLine method to get user saturdaySessions.input and parse the resulting string to a numeric type.
+//        //Use the nextLine method to get user input and parse the resulting string to a numeric type.
 //        //Assume that the rooms are perfect rectangles.
 //        //Assume that the user will enter valid numeric data for length and width.
 //
@@ -103,14 +103,14 @@ public class ConsoleExercises {
 ////        System.out.println("Volume: " + volume);
 //
 //        //DONE: The Scanner class can be told specifically what characters or pattern separates tokens in a
-//        // piece of saturdaySessions.input with the useDelimiter method. Add the following line of code to your
+//        // piece of input with the useDelimiter method. Add the following line of code to your
 //        // application after you have created a scanner (assuming the variable holding the Scanner
 //        // is named scanner):
 //            //How does this change the way your program operates? --> It didn't?
 //
 //        //Rewrite your classroom program to use nextInt method. If you added the line of code
 //        // above to your application, you should now have no trouble handling multiple pieces of
-//        // user saturdaySessions.input.
+//        // user input.
 //
         System.out.print("Enter length:");
         int length = scanner.nextInt();

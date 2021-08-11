@@ -1,7 +1,5 @@
 package saturdaySessions;
 
-import saturdaySessions.Musician;
-
 public class MusicianApp {
 
     public static void main(String[] args) {

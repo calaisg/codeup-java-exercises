@@ -1,12 +1,10 @@
-package saturdaySessions;
-
 import java.util.Scanner;
-public class input {
+public class Input {
 
     private Scanner sc = new Scanner(System.in);
 
     public String getString(){
-        System.out.println("Enter saturdaySessions.input: ");
+        System.out.println("Enter input: ");
         String input = sc.nextLine();
         return input;
     }
@@ -60,7 +58,7 @@ public class input {
 
 
     public static void main(String[] args){
-        input input = new input();
+        Input input = new Input();
         System.out.println(input.getString());
         System.out.println(input.yesNo());
         System.out.println(input.getInt(1, 10));

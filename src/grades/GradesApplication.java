@@ -9,9 +9,7 @@ public class GradesApplication {
     public static void displayChoices(HashMap <String, Student> students){
         System.out.println("Welcome!\n");
         System.out.println("Here are the Github usernames of our students:\n");
-        System.out.println("|" + students.get("NotAMorningPerson").getName() + "|  |" +
-                students.get("TinyMenace").getName() + "|  |" + students.get("TooMuchHair").getName()
-                + "|  |" + students.get("HairlessRat").getName() + "|");
+        System.out.println("|NotAMorningPerson|  |TinyMenace|  |TooMuchHair|  |HairlessRat|");
 
         //continue asking for selected student until they say no
         boolean continueRunning = true;
@@ -21,10 +19,6 @@ public class GradesApplication {
             String userAnswer = sc.nextLine();
             continueRunning = showUserSelection(userAnswer, students);
         }
-//keySet()
-        //reutrn set of strings and iterate over that set
-        //for each, each element string, and then go
-
     }
 
     //display student answer depending on user selection
@@ -46,6 +40,7 @@ public class GradesApplication {
                 System.out.println("Sorry, no student found with the GitHub username of \"" + selection + "\"\n");
         }
 
+        //check if user wants to continue
         System.out.println("\nWould you like to see another student?");
         Scanner sc = new Scanner(System.in);
         String userAnswer = sc.nextLine();
@@ -58,6 +53,7 @@ public class GradesApplication {
         }
     }
 
+    //display selected student values
     public static void displaySelectedStudent(String selection, HashMap <String, Student> students){
         System.out.println("\nName: " + students.get(selection).getName());
         System.out.println("Current Average: " + students.get(selection).getGradeAverage());

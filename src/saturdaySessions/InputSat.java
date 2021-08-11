@@ -1,12 +1,7 @@
-package util;
+package saturdaySessions;
 
 import java.util.Scanner;
-
-public class Input {
-
-    //Allow all of your methods for getting input to accept an optional String parameter
-    // named prompt. If passed, the method should show the given prompt to the user
-    // before parsing the input.
+public class InputSat {
 
     private Scanner sc = new Scanner(System.in);
 
@@ -28,13 +23,13 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        System.out.printf("Make Your Selection: ", min, max);
+        System.out.println("Enter your choice: ");
         int number = sc.nextInt();
         if(number >= min && number <= max){
             return number;
         }
         else{
-            System.out.println("Error: Choice Not Recognized!");
+            System.out.println("Error: Number not in range");
             return getInt(min, max);
         }
     }
@@ -65,15 +60,14 @@ public class Input {
 
 
     public static void main(String[] args){
-        Input input = new Input();
-        System.out.println(input.getString());
-        System.out.println(input.yesNo());
-        System.out.println(input.getInt(1, 10));
-        System.out.println(input.getInt());
-        System.out.println(input.getDouble(1.0, 10.0));
-        System.out.println(input.getDouble());
+        InputSat inputSat = new InputSat();
+        System.out.println(inputSat.getString());
+        System.out.println(inputSat.yesNo());
+        System.out.println(inputSat.getInt(1, 10));
+        System.out.println(inputSat.getInt());
+        System.out.println(inputSat.getDouble(1.0, 10.0));
+        System.out.println(inputSat.getDouble());
     }
 
-
-
 }
+

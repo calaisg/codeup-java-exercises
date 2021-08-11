@@ -5,9 +5,9 @@ public class Bob {
 
     //DONE: Create a class named Bob with a main method for the following exercise.
     //Bob is a lackadaisical teenager. In conversation, his responses are very limited.
-        // DONE: Bob answers 'Sure.' if you ask him a question. (the saturdaySessions.input ends with a question mark)
-        //DONE: He answers 'Whoa, chill out!' if you yell at him. (the saturdaySessions.input ends with an exclamation mark)
-        //DONE: He says 'Fine. Be that way!' if you address him without actually saying anything. (empty saturdaySessions.input)
+        // DONE: Bob answers 'Sure.' if you ask him a question. (the input ends with a question mark)
+        //DONE: He answers 'Whoa, chill out!' if you yell at him. (the input ends with an exclamation mark)
+        //DONE: He says 'Fine. Be that way!' if you address him without actually saying anything. (empty input)
         //DONE: He answers 'Whatever.' to anything else.
     //Write the Java code necessary so that a user of your command line application can have a conversation with Bob.
     Scanner sc = new Scanner(System.in);
