@@ -1,16 +1,28 @@
 package groceryList;
+import grades.Student;
 import util.*;
+
+import java.util.HashMap;
 
 public class GroceryApplication {
 
     //prompts user for item
-    public static void promptUserForItem(){
+    public static void promptUserForItem(HashMap<Item, String> groceryList){
         boolean continuePrompting = true;
         while(continuePrompting){
-            System.out.println("Enter an Item: ");
+            addToGroceryList(groceryList);
             continuePrompting = askUserToContinue();
         }
         displayGroceryList();
+    }
+
+    //create new Item on the grocery list with user input
+    public static void addToGroceryList(HashMap<Item, String> groceryList){
+        System.out.println("Enter an Item: ");
+        Input input = new Input();
+        String userItem = input.getString();
+        System.out.println("Enter Quantity of Item: ");
+        int userItemQuantity = input.getInt();
     }
 
     //ask if the user wants to continue - if non-valid choice is made, keep prompting user
@@ -42,7 +54,7 @@ public class GroceryApplication {
         return continueUser;
     }
 
-    //display Grocery List
+    //display Grocery List when finished adding items
     public static void displayGroceryList(){
         System.out.println("Grocery List");
         System.out.println("\nEnding Method. Goodbye!");
@@ -50,6 +62,7 @@ public class GroceryApplication {
 
 
     public static void main(String[] args){
+        HashMap<Item, String> groceryList = new HashMap<>();
 
         //prompts if want to make grocery list
         System.out.println("Would you like to create a grocery list?");
@@ -64,7 +77,7 @@ public class GroceryApplication {
         System.out.println("Would you like to add an item to the list?");
         boolean response = input.yesNo();
         if(response){
-            promptUserForItem();
+            promptUserForItem(groceryList);
         }
         else{
             System.out.println("\nEnding Method. Goodbye!");
