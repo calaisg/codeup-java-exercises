@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-//TODO: Attendace
+//TODO: Attendance
 //TODO: KeyValue to loop and make less code
 
 public class GradesApplication {
