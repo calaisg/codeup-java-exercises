@@ -28,7 +28,7 @@ public class MusicianApp {
 
     //PROMPT USER FOR CHOICE
     private static int promptUserForChoice(){
-        input input = new input();
+        InputSat input = new InputSat();
         int response = input.getInt(0, 6);
         return response;
     }

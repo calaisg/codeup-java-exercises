@@ -4,15 +4,13 @@ public class Input {
     private Scanner sc = new Scanner(System.in);
 
     public String getString(){
-        System.out.println("Enter input: ");
         String input = sc.nextLine();
         return input;
     }
 
     public boolean yesNo(){
-        System.out.println("Do you want to continue? (yes/y/no/n)");
         String answer = sc.nextLine();
-        if(answer.equalsIgnoreCase("yes") || answer.equalsIgnoreCase("y")){
+        if(answer.contains("y")){
             return true;
         }
         else{
@@ -21,7 +19,6 @@ public class Input {
     }
 
     public int getInt(int min, int max){
-        System.out.println("Enter your choice: ");
         int number = sc.nextInt();
         if(number >= min && number <= max){
             return number;
