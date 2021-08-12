@@ -49,12 +49,11 @@ public class Input {
     public int getInt(){
         String s = getString();
         try{
-            Integer.valueOf(s);
+            return Integer.valueOf(s);
         } catch (NumberFormatException e){
             System.out.println("Error: Input is not an integer!");
             return getInt();
         }
-        return Integer.parseInt(s);
     }
 
     //TODO
@@ -81,27 +80,42 @@ public class Input {
     public double getDouble(){
         String s = getString();
         try{
-            Double.valueOf(s);
+            return Double.valueOf(s);
         } catch(NumberFormatException e){
             System.out.println("Error: Input is not a double!");
             return getDouble();
         }
-        return Double.parseDouble(s);
     }
 
+    public int getBinary(){
+        String s = getString();
+        try{
+            return Integer.valueOf(s, 2);
+        } catch(NumberFormatException e){
+            System.out.println("Error: Input is not a number!");
+            return getBinary();
+        }
+    }
 
-
+    public int getHex(){
+        String s = getString();
+        try{
+            return Integer.valueOf(s, 16);
+        } catch (NumberFormatException e){
+            System.out.println("Error: Input is not a number!");
+            return getHex();
+        }
+    }
 
     public static void main(String[] args){
         Input input = new Input();
 //        System.out.println(input.getString());
 //        System.out.println(input.yesNo());
 //        System.out.println(input.getInt(1, 10));
-            System.out.println(input.getInt());
+//            System.out.println(input.getInt());
 //        System.out.println(input.getDouble(1.0, 10.0));
 //        System.out.println(input.getDouble());
+
+//            System.out.println(input.getHex());
     }
-
-
-
 }
