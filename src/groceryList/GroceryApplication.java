@@ -1,7 +1,5 @@
 package groceryList;
-import grades.Student;
 import util.*;
-
 import java.util.HashMap;
 
 public class GroceryApplication {
@@ -18,11 +16,17 @@ public class GroceryApplication {
 
     //create new Item on the grocery list with user input
     public static void addToGroceryList(HashMap<Item, String> groceryList){
-        System.out.println("Enter an Item: ");
         Input input = new Input();
+        System.out.println("Enter an Item: ");
         String userItem = input.getString();
         System.out.println("Enter Quantity of Item: ");
         int userItemQuantity = input.getInt();
+
+
+
+
+
+
     }
 
     //ask if the user wants to continue - if non-valid choice is made, keep prompting user
@@ -54,6 +58,7 @@ public class GroceryApplication {
         return continueUser;
     }
 
+
     //display Grocery List when finished adding items
     public static void displayGroceryList(){
         System.out.println("Grocery List");
@@ -82,6 +87,5 @@ public class GroceryApplication {
         else{
             System.out.println("\nEnding Method. Goodbye!");
         }
-
     }
 }
