@@ -23,7 +23,6 @@ public class GradesApplication {
             //gets user choice from Input
             Input input = new Input();
             int selection = input.getInt(0, 3);
-
             switch(selection){
                 case 0:
                     System.out.println("\nEnding Method. Goodbye!");
@@ -45,11 +44,12 @@ public class GradesApplication {
         }
     }
 
-    //TODO: KeyValue to loop and make less code
     //if 1 selected, display student GitHub Info
     public static boolean displayStudentMenu(HashMap <String, Student> students){
         System.out.println("\nHere are the Github usernames of our students:\n");
-        System.out.println("|NotAMorningPerson|  |TinyMenace|  |TooMuchHair|  |HairlessRat|");
+        for(String key : students.keySet()){
+            System.out.print("|" + key +  "|  ");
+        }
 
         //continue asking for selected student until they say no
         boolean continueRunning = true;
@@ -60,6 +60,7 @@ public class GradesApplication {
             continueRunning = showUserSelection(userAnswer, students);
         }
 
+        //check if user wants to exit or return to main menu
         return returnToMainMenu();
     }
 
@@ -86,28 +87,26 @@ public class GradesApplication {
         System.out.println("Current Average: " + students.get(selection).getGradeAverage());
     }
 
-    //TODO: KeyValue to loop and make less code
     //if 2 selected, display overall class average
     public static boolean displayClassAverage(HashMap <String, Student> students){
-
-        int total = (int) (students.get("NotAMorningPerson").getGradeAverage() + students.get("TinyMenace").getGradeAverage()
-                        + students.get("TooMuchHair").getGradeAverage() + students.get("HairlessRat").getGradeAverage());
+        int total = 0;
+        for(String key : students.keySet()){
+            total += students.get(key).getGradeAverage();
+        }
         System.out.println("Overall Class Average: " + total / students.size());
 
         //check if user wants to exit or return to main menu
         return returnToMainMenu();
     }
 
-    //TODO: KeyValue to loop and make less code
     //if 3 selected, print our CSV Report
     public static boolean displayCSVReport(HashMap <String, Student> students){
-
         System.out.println("\nname,github_username,average");
-        System.out.println(students.get("NotAMorningPerson").getName() + ",NotAMorningPerson," + students.get("NotAMorningPerson").getGradeAverage());
-        System.out.println(students.get("TinyMenace").getName() + ",TinyMenace," + students.get("TinyMenace").getGradeAverage());
-        System.out.println(students.get("TooMuchHair").getName() + ",TooMuchHair," + students.get("TooMuchHair").getGradeAverage());
-        System.out.println(students.get("HairlessRat").getName() + ",HairlessRat," + students.get("HairlessRat").getGradeAverage());
+        for(String key : students.keySet()){
+            System.out.println(students.get(key).getName() + "," + key + "," + students.get(key).getGradeAverage());
+        }
 
+        //check if user wants to exit or return to main menu
         return returnToMainMenu();
     }
 
@@ -144,9 +143,9 @@ public class GradesApplication {
         s4.addGrade(83);
 
         students.put("NotAMorningPerson", s1);
-        students.put("TinyMenace", s2);
-        students.put("TooMuchHair", s3);
-        students.put("HairlessRat", s4);
+        students.putIfAbsent("TinyMenace", s2);
+        students.putIfAbsent("TooMuchHair", s3);
+        students.putIfAbsent("HairlessRat", s4);
 
         displayChoices(students);
     }
