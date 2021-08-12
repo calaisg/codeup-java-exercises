@@ -9,6 +9,8 @@ import util.*;
 
 public class GradesApplication {
 
+    static Input input = new Input();
+
     //initial display of usernames
     public static void displayChoices(HashMap <String, Student> students){
         boolean continueRunning = true;
@@ -21,7 +23,6 @@ public class GradesApplication {
                     "3 - Print CSV Report of All Students\n");
 
             //gets user choice from Input
-            Input input = new Input();
             int selection = input.getInt(0, 3);
             switch(selection){
                 case 0:
@@ -55,7 +56,6 @@ public class GradesApplication {
         boolean continueRunning = true;
         while(continueRunning){
             System.out.println("\nWhat Student would you like to see more information on?");
-            Input input = new Input();
             String userAnswer = input.getString();
             continueRunning = showUserSelection(userAnswer, students);
         }
@@ -75,7 +75,6 @@ public class GradesApplication {
 
         //check if user wants to check another student
         System.out.println("\nWould you like to see another student?");
-        Input input = new Input();
         boolean userAnswer = input.yesNo();
         return userAnswer;
     }
@@ -113,7 +112,6 @@ public class GradesApplication {
     //check if user wants to return to main menu
     public static boolean returnToMainMenu(){
         System.out.println("\nDo you want to return to the main menu?");
-        Input input = new Input();
         boolean userAnswer = input.yesNo();
         return userAnswer;
     }
