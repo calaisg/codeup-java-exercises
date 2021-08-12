@@ -25,8 +25,17 @@ public class Input {
         }
     }
 
+    //TODO
     public int getInt(int min, int max){
-        int number = sc.nextInt();
+        String s = getString();
+        try{
+            Integer.valueOf(s);
+        } catch(NumberFormatException e){
+            System.out.println("Error: Input is not an integer!");
+            return getInt(min, max);
+        }
+
+        int number = Integer.parseInt(s);
         if(number >= min && number <= max){
             return number;
         }
@@ -36,13 +45,29 @@ public class Input {
         }
     }
 
+    //TODO
     public int getInt(){
-        int number = sc.nextInt();
-        return number;
+        String s = getString();
+        try{
+            Integer.valueOf(s);
+        } catch (NumberFormatException e){
+            System.out.println("Error: Input is not an integer!");
+            return getInt();
+        }
+        return Integer.parseInt(s);
     }
 
+    //TODO
     public double getDouble(double min, double max){
-        double number = sc.nextDouble();
+        String s = getString();
+        try{
+            Double.valueOf(s);
+        } catch(NumberFormatException e){
+            System.out.println("Error: Input is not a double!");
+            return getDouble(min, max);
+        }
+
+        double number = Double.parseDouble(s);
         if(number >= min && number <= max){
             return number;
         }
@@ -52,20 +77,29 @@ public class Input {
         }
     }
 
+    //TODO
     public double getDouble(){
-        double number = sc.nextDouble();
-        return number;
+        String s = getString();
+        try{
+            Double.valueOf(s);
+        } catch(NumberFormatException e){
+            System.out.println("Error: Input is not a double!");
+            return getDouble();
+        }
+        return Double.parseDouble(s);
     }
+
+
 
 
     public static void main(String[] args){
         Input input = new Input();
-        System.out.println(input.getString());
-        System.out.println(input.yesNo());
-        System.out.println(input.getInt(1, 10));
-        System.out.println(input.getInt());
-        System.out.println(input.getDouble(1.0, 10.0));
-        System.out.println(input.getDouble());
+//        System.out.println(input.getString());
+//        System.out.println(input.yesNo());
+//        System.out.println(input.getInt(1, 10));
+            System.out.println(input.getInt());
+//        System.out.println(input.getDouble(1.0, 10.0));
+//        System.out.println(input.getDouble());
     }
 
 
