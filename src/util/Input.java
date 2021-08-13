@@ -25,17 +25,15 @@ public class Input {
         }
     }
 
-    //TODO
     public int getInt(int min, int max){
-        String s = getString();
+        int number;
         try{
-            Integer.valueOf(s);
+            number = Integer.valueOf(getString());
         } catch(NumberFormatException e){
             System.out.println("Error: Input is not an integer!");
             return getInt(min, max);
         }
 
-        int number = Integer.parseInt(s);
         if(number >= min && number <= max){
             return number;
         }
@@ -45,28 +43,23 @@ public class Input {
         }
     }
 
-    //TODO
     public int getInt(){
-        String s = getString();
         try{
-            return Integer.valueOf(s);
+            return Integer.valueOf(getString());
         } catch (NumberFormatException e){
             System.out.println("Error: Input is not an integer!");
             return getInt();
         }
     }
 
-    //TODO
     public double getDouble(double min, double max){
-        String s = getString();
+        double number;
         try{
-            Double.valueOf(s);
+            number = Double.valueOf(getString());
         } catch(NumberFormatException e){
             System.out.println("Error: Input is not a double!");
             return getDouble(min, max);
         }
-
-        double number = Double.parseDouble(s);
         if(number >= min && number <= max){
             return number;
         }
@@ -76,11 +69,9 @@ public class Input {
         }
     }
 
-    //TODO
     public double getDouble(){
-        String s = getString();
         try{
-            return Double.valueOf(s);
+            return Double.valueOf(getString());
         } catch(NumberFormatException e){
             System.out.println("Error: Input is not a double!");
             return getDouble();
