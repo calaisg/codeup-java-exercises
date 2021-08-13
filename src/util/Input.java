@@ -79,9 +79,8 @@ public class Input {
     }
 
     public int getBinary(){
-        String s = getString();
         try{
-            return Integer.valueOf(s, 2);
+            return Integer.valueOf(getString(), 2);
         } catch(NumberFormatException e){
             System.out.println("Error: Input is not a number!");
             return getBinary();
@@ -89,9 +88,8 @@ public class Input {
     }
 
     public int getHex(){
-        String s = getString();
         try{
-            return Integer.valueOf(s, 16);
+            return Integer.valueOf(getString(), 16);
         } catch (NumberFormatException e){
             System.out.println("Error: Input is not a number!");
             return getHex();
