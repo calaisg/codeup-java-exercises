@@ -1,4 +1,4 @@
-package lectures;
+package lectures.exceptions;
 
 public class UserCantTypeException extends Exception {
 

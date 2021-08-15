@@ -141,7 +141,6 @@ public class MethodsExercises {
         System.out.println("Second Roll: "+ secondRoll);
         return (firstRoll + secondRoll);
     }
-
     //---------------------------------------------------------------------------------------
     //Main Function
     public static void main(String[] args){

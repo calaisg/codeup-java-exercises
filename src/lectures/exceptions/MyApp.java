@@ -1,4 +1,4 @@
-package lectures;
+package lectures.exceptions;
 
 import util.Input;
 
