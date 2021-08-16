@@ -8,7 +8,6 @@ import util.*;
 //TODO: Attendance
 
 public class GradesApplication {
-
     //initial display of usernames
     public static void displayChoices(HashMap <String, Student> students){
         boolean continueRunning = true;
@@ -76,8 +75,7 @@ public class GradesApplication {
         //check if user wants to check another student
         System.out.println("\nWould you like to see another student?");
         Input input = new Input();
-        boolean userAnswer = input.yesNo();
-        return userAnswer;
+        return input.yesNo();
     }
 
     //display selected student values
@@ -85,6 +83,8 @@ public class GradesApplication {
         System.out.println("\nName: " + students.get(selection).getName());
         System.out.println("Grades: " + students.get(selection).getGrades());
         System.out.println("Current Average: " + students.get(selection).getGradeAverage());
+        System.out.println("Attendance: " + students.get(selection).getAttendance());
+        System.out.println("Attendance Percentage: ");
     }
 
     //if 2 selected, display overall class average
@@ -126,6 +126,7 @@ public class GradesApplication {
         s1.addGrade(90);
         s1.addGrade(92);
         s1.addGrade(93);
+        s1.recordAttendance("2020-08-09", "P");
 
         Student s2 = new Student("Nala");
         s2.addGrade(50);
